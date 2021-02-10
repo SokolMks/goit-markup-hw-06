@@ -26,12 +26,12 @@
         <li class="nav-item">
           <a href="mailto:info@devstudio.com" class="address-link link">
             <svg class="contact-svg" width="16" height="12">
-              <use href="./images/sprite.svg#envelope"></use>
+              <use href="../images/sprite.svg#envelope"></use>
             </svg>
             info@devstudio.com</a></li>
         <li class="nav-item"><a href="tel:+380961111111" class="address-link link">
           <svg class="contact-svg" width="10" height="16">
-            <use href="./images/sprite.svg#smartphone"></use>
+            <use href="../images/sprite.svg#smartphone"></use>
           </svg>
           +38 096 111 11 11</a></li>
       </ul>
@@ -371,13 +371,70 @@
             </a>
           </li>
         </ul>
-        
+      </div>
+      <div class="subscribe">
+        <p class="subscribe-title">Подпишитесь на рассылку</p>
+        <form class="subscribe-form">
+          <input type="email" class="subscribe-input" name="email" placeholder="E-mail">
+          <button type="button" class="subscribe-btn">Подписаться 
+            <svg class="subscribe-btn-pic" width="24" height="24">
+              <use href="../images/sprite.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </form>
       </div>
     </div>
   </footer>
   <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-      <button data-modal-close>X</button>
+      <p class="form-title">Оставьте свои данные, мы вам перезвоним</p>
+      <button data-modal-close class="close-button">
+        <svg class="closing-cross" width="11" height="11">
+          <use href="../images/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+      <form>
+        <label class="label-title">
+          Имя
+        </label>
+        <div class="input-field">
+          <input type="text" class="form-input" name="name">
+          <svg class="input-icon" width="12" height="12">
+            <use href="../images/sprite.svg#icon-name"></use>
+          </svg>
+        </div>
+        <label class="label-title">
+          Телефон
+        </label>
+        <div class="input-field">
+          <input type="tel" class="form-input" name="telephone">
+          <svg class="input-icon" width="13" height="13">
+            <use href="../images/sprite.svg#icon-phone"></use>
+          </svg>
+        </div>
+        <label class="label-title">
+          Почта
+        </label>
+        <div class="input-field">
+          <input type="email" class="form-input" name="email">
+          <svg class="input-icon" width="15" height="12">
+            <use href="../images/sprite.svg#icon-mail"></use>
+          </svg>
+        </div>
+        <label class="label-title">
+          Комментарий
+        </label>
+        <textarea name="feedback" class="text-input" placeholder="Введите текст"></textarea>
+          <label class="agreement">
+            <input type="checkbox" class="agreement-checkbox" name="agreement">
+            <span class="icon"></span>
+              <span class="agreement-text">
+                Соглашаюсь с рассылкой и принимаю
+                <a href="#" class="agreement-link">Условия договора</a>
+              </span>
+          </label>
+        <button class="submit-btn button">Отправить</button>
+      </form>
     </div>
   </div>
   <script src="./js/modal.js"></script>
