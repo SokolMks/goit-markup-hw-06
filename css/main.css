@@ -189,7 +189,7 @@ img {
 .street-address {
   display: block;
   color: var(--primary-background-color);
-
+  width: 231px;
   font-size: 14px;
   line-height: 1.71;
 }
@@ -482,20 +482,35 @@ img {
 textarea::placeholder {
   color:rgba(117, 117, 117, 0.5);;
 }
-.agreement {
+
+
+
+
+.agreement-text {
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
 }
 .agreement-checkbox {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  appearance: none; */
   position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
-.icon{
+.agreement-text::before{
+  content: '';
   display: inline-block;
   width: 16px;
   height: 15px;
@@ -503,19 +518,26 @@ textarea::placeholder {
   border-radius: 2px;
   margin-right: 7px;
 }
-.agreement-checkbox:checked + .icon {
+/* .icon{
+    display: inline-block;
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--title-text-color);
+  border-radius: 2px;
+  margin-right: 7px;
+} */
+.agreement-checkbox:focus + .agreement-text::before {
+  outline: 2px solid var(--title-text-color);
+}
+.agreement-checkbox:checked + .agreement-text::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   background-image: url('../images/icon-tick.svg');
   background-size: contain;
   background-origin: border-box;
 }
-.agreement-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-}
 .agreement-link {
+  margin-left: 5px;
   color: var(--accent-color);
 }
 .submit-btn {
