@@ -532,7 +532,7 @@ textarea::placeholder {
 .agreement-checkbox:checked + .agreement-text::before {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
-  background-image: url('./images/icon-tick.svg');
+  background-image: url('../images/icon-tick.svg');
   background-size: contain;
   background-origin: border-box;
 }
